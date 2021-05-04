@@ -69,14 +69,6 @@ Vector<T>::Vector(const size_t size)
 	this->data = new T[size];
 	this->size = size;
 }
-template <class T>
-void Vector<T>::addElements(const Vector<T>& newData) {
-   if (size == capacity)
-   {
-       resize();
-   }
-    data[size++] = newData;
-}
 
 template <class T>
 void Vector<T>::popBack()
