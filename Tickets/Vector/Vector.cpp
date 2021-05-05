@@ -59,15 +59,16 @@ Vector<T>::Vector(int capacity)
         this->capacity = capacity;
     }
     size = 0;
-    data = new Vector<T>[this->capacity];
+    data = new T[this->capacity];
 }
 
 
 template<class T>
 Vector<T>::Vector(const size_t size)
 {
+    this->size = size;
 	this->data = new T[size];
-	this->size = size;
+	
 }
 
 template <class T>
