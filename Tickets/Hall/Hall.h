@@ -3,26 +3,19 @@
 #include "Show.h"
 class Hall{
 private:
-   char * hallName;
-   Show * showNames;
+   
    size_t hallNumber;
-   Rows numberRows;
-   Seats numberSeats;
+   int numberRows;
+   int numberSeatsPerRows;
 public:
     Hall();
-    Hall(const Hall &other);
-    Hall& operator=(const Hall& other);
-    ~Hall();
+    Hall(int numberRows,int numberSeatsPErRows);
     
-    void setHallName(const char *hallName);
-    void setShowNames(const Show * showNames);
     void setHallNumber(const size_t hallNumber);
-    void setNumberRows(const Rows numberRows);
-    void setNumberSeats(const Seats numberSeats );
+    void setNumberRows(const int numberRows);
+    void setNumberSeats(const int numberSeatsPerRows );
 
-    char * getHallName() const;
-    Show * getShowNames() const;
     size_t getHallNumber() const;
-    Rows getNumberRows() const const;
-    Seats getNumberSeats( ) const;
+    int getNumberRows() const const;
+    int getNumberSeats( ) const;
 };
