@@ -12,7 +12,7 @@ private:
 public:
     void copy(const Vector<T>&);
 	void destroy();
-	//void resize();
+	void resize();
 
 	Vector();
 	Vector(const Vector<T>&);

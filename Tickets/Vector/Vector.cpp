@@ -24,7 +24,7 @@ Vector<T>::Vector()
 {
 	this->data = nullptr;
 	this->size = 0;
-    this->capacity = 0;
+    this->capacity = 8;
 }
 
 template<class T>
@@ -47,6 +47,19 @@ template<class T>
 Vector<T>::~Vector()
 {
     destroy();
+}
+
+template<class T>
+void Vector<T>::resize()
+{
+    T*temp = new T[this->capacity*2];
+    this->capacity *=2;
+   for (size_t i = 0; i < this->size; i++)
+   {
+       temp[i]=this->arr[i];
+   }
+   this->erase();
+   this->arr=temp;
 }
 
 template<class T>
