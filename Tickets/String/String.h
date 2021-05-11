@@ -18,7 +18,7 @@ public:
 public:
 
 	int getSize() const;
-	String&  concat(const String&);
+	String&  concat(const String & other);
 	void split(const char* delimiter);
 	void reverse();
 	bool empty();
@@ -27,14 +27,25 @@ public:
 	
 	const char operator[](int )const;
 	char operator[](int );
-	String& operator+=(const String&);
-	String operator+(const String&) ;
+
+	String& operator+=(const String& other);
+	String operator+(const String& other) ;
+
+	bool operator==(const String& other) const;
+    bool operator<(const String& other) const;
+    bool operator<=(const String& other) const;
+    bool operator>(const String& other) const;
+    bool operator>=(const String& other) const;
+
 	void append(const String&);
 	void pushBack(const char &element);
-
-	void popback();
+    void popback();
+	
 	unsigned find(const char* substring) const;
 	void compare(const String&);
 	void swap(const String&);
-	void print() const;
+	
+    friend std::istream& operator>>(std::istream& in, String& other) ;
+	friend std::ostream& operator<<(std::ostream& out, const String& other);
+
 };

@@ -19,17 +19,7 @@ public:
   bool operator>(const Date &other) const;
   bool operator>=(const Date &other) const;
 
-  friend std::istream &operator>>(std::istream &in, Date &input);
-  friend std::ostream &operator<<(std::ostream &out, Date &output);
+  friend std::istream &operator>>(std::istream &in, Date &other);
+  friend std::ostream &operator<<(std::ostream &out,const Date &other);
 };
-std::istream &operator>>(std::istream &in, Date &input)
-{
-  in >> input.date;
-  return in;
-}
 
-std::ostream &operator<<(std::ostream &out, const Date &output)
-{
-  out << output.date;
-  return out;
-}

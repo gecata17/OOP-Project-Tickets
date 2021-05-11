@@ -56,20 +56,7 @@ int String::getSize() const
 {
     return this->size;
 }
-void String::print() const
-{
-    if (this->data == nullptr)
-    {
-        std::cout << "Empty" << std::endl;
-        return;
-    }
-    std::cout << "Current string  : " << std::endl;
-    for (size_t i = 0; i < this->size; i++)
-    {
-        std::cout << data[i];
-    }
-    std::cout << " Current size" << this->size << std::endl;
-}
+
 
 const char String::operator[](int index) const
 {
@@ -97,20 +84,7 @@ String &String::operator+=(const String &other)
 
 String String::operator+(const String &other)
 {
-    size_t newSize = this->size + other.size;
-    String newStr;
-    for (size_t i = 0; i < this->size; i++)
-    {
-        newStr.data[i] = this->data[i];
-    }
-    size_t j = 0;
-    for (size_t i = this->size; i < newSize; i++)
-    {
-        newStr.data[i] = other.data[i];
-        ++j;
-    }
-
-    return newStr;
+    return *this + other;
 }
 
 String &String::concat(const String &other)
@@ -258,4 +232,44 @@ unsigned String::find(const char *substring) const
     }
 
     throw std::out_of_range("No such substring!");
+}
+
+bool String:: operator==(const String& other) const{
+    return this->data == other.data;
+}
+
+bool String:: operator<(const String& other) const{
+    return this->data < other.data;
+}
+
+bool String:: operator<=(const String& other) const{
+    return this->data <= other.data;
+}
+
+bool String:: operator>(const String& other) const{
+    return this->data > other.data;
+}
+
+bool String:: operator>=(const String& other) const{
+    return this->data >= other.data;
+}
+
+std::istream& operator>>(std::istream& in, String& other)
+{
+    std::cout<<"Enter string length: ";
+    in>>other.size;
+    std::cout<<"\nEnter the string: ";
+    in.getline(other.data, other.size);
+    return in;
+  
+}
+
+std::ostream& operator<<(std::ostream& out, const String& other)
+{
+   for (size_t i = 0; i < other.size; ++i)
+   {
+		out << other.data[i];
+   }
+	return out;
+
 }
