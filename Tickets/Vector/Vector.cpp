@@ -238,13 +238,13 @@ Vector<T> Vector<T>::operator-(const Vector<T> &other) const
 }
 
 template <class T>
-int Vector<T>::getCapacity(const size_t capacity) const
+int Vector<T>::getCapacity() const
 {
     return this->capacity;
 }
 
 template <class T>
-int Vector<T>::getSize(const size_t size) const
+int Vector<T>::getSize() const
 {
     return this->size;
 }

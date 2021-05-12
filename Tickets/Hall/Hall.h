@@ -2,21 +2,29 @@
 #include <iostream>
 #include "Show.cpp"
 #include "Date.cpp"
+#include "Vector.cpp"
 class Hall{
 private:
    
    size_t hallNumber;
    int numberRows;
    int numberSeatsPerRows;
+   Vector<Date> bookedDates;
 public:
     Hall();
-    Hall(int numberRows,int numberSeatsPErRows);
+    Hall(int numberRows,int numberSeatsPerRows);
     
     void setHallNumber(const size_t hallNumber);
     void setNumberRows(const int numberRows);
-    void setNumberSeats(const int numberSeatsPerRows );
+    void setNumberColumns(const int numberSeatsPerRows );
 
     size_t getHallNumber() const;
     int getNumberRows() const const;
-    int getNumberSeats( ) const;
+    int getNumberColumns( ) const;
+
+    void book(const Date& date);
+    bool isFree(const Date& date) const;
+    bool isBooked(const Date &date) const;
+
+    
 };

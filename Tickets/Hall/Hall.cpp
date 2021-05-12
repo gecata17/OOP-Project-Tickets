@@ -11,7 +11,7 @@ Hall::Hall(int numberRows, int numberSeatsPerRows)
 {
 
     setNumberRows(numberRows);
-    setNumberSeats(numberSeatsPerRows);
+    setNumberColumns(numberSeatsPerRows);
 }
 void Hall::setHallNumber(const size_t hallNumber)
 {
@@ -23,8 +23,10 @@ void Hall::setNumberRows(const int numberRows)
     this->numberRows = numberRows;
 }
 
-void Hall::setNumberSeats(const int numberSeatsPerRows){
-    this->numberSeatsPerRows = numberSeatsPerRows}
+void Hall::setNumberColumns(const int numberSeatsPerRows)
+{
+    this->numberSeatsPerRows = numberSeatsPerRows;
+}
 
 size_t Hall::getHallNumber() const
 {
@@ -36,7 +38,29 @@ int Hall::getNumberRows() const
     return this->numberRows;
 }
 
-int Hall::getNumberSeats() const
+int Hall::getNumberColumns() const
 {
     return this->numberSeatsPerRows;
+}
+
+void Hall::book(const Date &date)
+{
+    bookedDates.pushBack(date);
+}
+
+bool Hall::isFree(const Date &date) const
+{
+    for (size_t i = 0; i < bookedDates.getSize(); i++)
+    {
+        if (bookedDates[i] == date)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool Hall::isBooked(const Date &date) const
+{
+    return !isFree(date);
 }

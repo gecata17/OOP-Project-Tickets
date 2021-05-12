@@ -11,12 +11,12 @@ private:
    String showName;
    Date date;
    Vector<Row> rows;
-   int hallIndex;
+   
 public:
   Show();
-  ~Show();
+  Show(const String& showName,int numberRows,int numberColumns, const Date& date);
   
-  void setName(const char* name);
+  void setName(const char* showName);
 
-  char* getName() const;
+  String getName() const;
 };

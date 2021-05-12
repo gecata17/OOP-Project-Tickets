@@ -41,8 +41,8 @@ public:
 	Vector<T> operator-(const Vector<T>& )const;
 
 	//getters
-	int getCapacity(const size_t capacity) const;
-	int getSize(const size_t size) const;
+	int getCapacity() const;
+	int getSize() const;
 
 	//print method
 	void print() const;

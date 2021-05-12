@@ -22,7 +22,6 @@ Date Seat::currentDate()
 Seat::Seat()
 {
     this->rowNumber = 0;
-    this->receipt = 0;
     isBookedSeat = false;
     this->seatNumber = 0;
     this->receipt = "";

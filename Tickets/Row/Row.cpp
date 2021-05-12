@@ -15,10 +15,17 @@ Row::Row(int rowNumber, int numberOfSeats)
     }
 }
 
-// int Row:: getSize() const{
-//     return seats.getSize(size);
-// }
-
-Seat &Row::operator[](int i)
+int Row::getSize() const
 {
+    return seats.getSize();
+}
+
+Seat &Row::operator[](int index)
+{
+    return seats[index];
+}
+
+const Seat &Row::operator[](int index) const
+{
+    return seats[index];
 }

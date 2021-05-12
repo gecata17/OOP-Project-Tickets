@@ -6,7 +6,9 @@ using std::to_string;
 class Date
 {
 private:
-  String date;
+  String date;   
+
+  // YYYY-MM-DD
 
 public:
   Date();
