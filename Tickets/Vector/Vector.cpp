@@ -122,10 +122,10 @@ void Vector<T>::pushBack(const T &element)
     }
     array[size] = element;
 
-    /*if (size > capacity)
+    if (size > capacity)
     {
         resize();
-    }*/
+    }
 
     ++size;
     delete[] this->data;
@@ -148,10 +148,10 @@ void Vector<T>::pushFront(const T &element)
     }
     array[0] = element;
 
-    /*if (size > capacity)
+    if (size > capacity)
     {
         resize();
-    }*/
+    }
 
     ++size;
     delete[] this->data;
@@ -180,7 +180,7 @@ void Vector<T>::popFront()
 }
 
 template <class T>
-const T Vector<T>::operator[](int index) const
+const T& Vector<T>::operator[](int index) const
 {
     if (index >= 0 && index < size)
     {
@@ -191,7 +191,7 @@ const T Vector<T>::operator[](int index) const
 }
 
 template <class T>
-T Vector<T>::operator[](int index)
+T& Vector<T>::operator[](int index)
 {
     if (index >= 0 && index < size)
     {
@@ -201,41 +201,6 @@ T Vector<T>::operator[](int index)
     return 0;
 }
 
-template <class T>
-Vector<T> &Vector<T>::operator+=(const Vector<T> &other)
-{
-    for (int i = 0; i < other.size; i++)
-    {
-        this->data[i] += other.data[i];
-    }
-    return *this;
-}
-
-template <class T>
-Vector<T> Vector<T>::operator+(const Vector<T> &other) const
-{
-    Vector<T> sum(*this);
-    sum += other;
-    return sum;
-}
-
-template <class T>
-Vector<T> &Vector<T>::operator-=(const Vector<T> &other)
-{
-    for (int i = 0; i < other.size; i++)
-    {
-        this->data[i] -= other.data[i];
-    }
-    return *this;
-}
-
-template <class T>
-Vector<T> Vector<T>::operator-(const Vector<T> &other) const
-{
-    Vector<T> diff(*this);
-    diff -= other;
-    return diff;
-}
 
 template <class T>
 int Vector<T>::getCapacity() const

@@ -31,7 +31,7 @@ public:
 	String& operator+=(const String& other);
 	String operator+(const String& other) ;
 
-	bool operator==(const String& other) const;
+	
     bool operator<(const String& other) const;
     bool operator<=(const String& other) const;
     bool operator>(const String& other) const;

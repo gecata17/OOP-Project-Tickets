@@ -234,9 +234,7 @@ unsigned String::find(const char *substring) const
     throw std::out_of_range("No such substring!");
 }
 
-bool String:: operator==(const String& other) const{
-    return this->data == other.data;
-}
+
 
 bool String:: operator<(const String& other) const{
     return this->data < other.data;

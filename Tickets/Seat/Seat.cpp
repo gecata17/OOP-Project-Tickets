@@ -5,7 +5,7 @@ int Seat::randomNumber()
 {
     srand(time(nullptr));  // srand makes rand really generate random number
                            // time(nullptr) is the number of seconds since 1970
-    return rand() % 10000; // + 1 so that it's not 0
+    return rand() % 10000; 
 }
 
 // Credits: https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
@@ -17,6 +17,8 @@ Date Seat::currentDate()
     int month = 1 + local_time->tm_mon;
     int day = local_time->tm_mday;
     Date date(year, month, day);
+
+    return date;
 }
 
 Seat::Seat()

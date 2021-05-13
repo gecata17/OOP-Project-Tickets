@@ -24,21 +24,15 @@ public:
 	void popBack();//remove element at the back
 	void pushFront(const T& element);//add element at the front
 	void popFront();//remove element at the front
-	void popByData();
+	
 
-	void addElements(const Vector<T> & newData);
+
 
 	//index operator
-	const T operator[](int)const;
-	T operator[](int);
+	const T& operator[](int)const;
+	T& operator[](int);
 
-	//operators +,+=
-	Vector<T>& operator+=(const Vector<T>&);
-	Vector<T> operator+(const Vector<T>& )const;
-
-	//operator -,-=
-	Vector<T>& operator -=(const Vector<T>&);
-	Vector<T> operator-(const Vector<T>& )const;
+	
 
 	//getters
 	int getCapacity() const;
