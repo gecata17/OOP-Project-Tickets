@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "String.h"
+#include "String.cpp"
 #include "Date.h"
 #include<ctime>
 #include<cstdlib>

@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include "String.h"
 
 void String::copy(const String &other)

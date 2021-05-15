@@ -1,5 +1,5 @@
 #pragma once
-#include "String.h"
+#include "String.cpp"
 #include <iostream>
 #include <fstream>
 using std::to_string;
@@ -7,7 +7,9 @@ class Date
 {
 private:
   String date;   
-
+  size_t year;
+  size_t day;
+  size_t month;
   // YYYY-MM-DD
 
 public:
