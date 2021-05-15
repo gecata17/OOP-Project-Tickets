@@ -18,5 +18,21 @@ public:
   
   void setName(const char* showName);
 
-  String getName() const;
+  String getShowName() const;
+  int getNumberOfColumns() const;
+  int getAllSeats() const;
+  int getBookedSeats() const;
+  int getFreeSeats() const;
+  int getBookedSeatsWhichAreNotPurchased() const;
+  int getPurchasedSeatsInDateInterval(const Date& dateFrom, const Date& dateTo) const;
+  int getSeatNumber(int serialNumber);
+
+  Date getDate() const;
+
+  bool isValid(int rowNumber,int seatNumber) const;
+  bool isBooked(int rowNumber, int seatNumber) const;
+  bool isPurchased(int rowNumber, int seatNumber) const; 
+  void bookSeat(int rowNumber, int seatNumber , const String& receipt);
+  void unbookSeat(int rowNumber, int seatNumber);
+  void purchaseTicket(int rowNumber,int seatNumber);
 };

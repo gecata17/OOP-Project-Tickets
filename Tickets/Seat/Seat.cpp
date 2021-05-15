@@ -3,9 +3,9 @@
 // Credits: https://en.cppreference.com/w/cpp/numeric/random/srand
 int Seat::randomNumber()
 {
-    srand(time(nullptr));  // srand makes rand really generate random number
-                           // time(nullptr) is the number of seconds since 1970
-    return rand() % 10000; 
+    srand(time(nullptr)); // srand makes rand really generate random number
+                          // time(nullptr) is the number of seconds since 1970
+    return rand() % 10000;
 }
 
 // Credits: https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
@@ -53,22 +53,32 @@ void Seat::unbook()
     isBookedSeat = false;
 }
 
-void Seat::setReceipt(const String& receipt){
-    this->receipt=receipt;
+void Seat::setReceipt(const String &receipt)
+{
+    this->receipt = receipt;
 }
 
-String Seat:: getReceipt() const{
+String Seat::getReceipt() const
+{
     return this->receipt;
 }
 
-bool Seat::isPurchased() const{
-    return ticketSerialNumber != 0 ;
+bool Seat::isPurchased() const
+{
+    return ticketSerialNumber != 0;
 }
 
-void Seat:: purchase() {
-    if(!isPurchased()){
+bool Seat::isPurchasedInDateInterval(const Date &dateFrom, const Date &dateTo)
+{
+    return dateOfPurchase >=dateFrom && dateOfPurchase <= dateTo;
+}
+
+void Seat::purchase()
+{
+    if (!isPurchased())
+    {
         book();
-        ticketSerialNumber = (rowNumber* 100 + seatNumber) * 10000 + randomNumber();
-        dateOfPurchase = currentDate(); 
+        ticketSerialNumber = (rowNumber * 100 + seatNumber) * 10000 + randomNumber();
+        dateOfPurchase = currentDate();
     }
 }

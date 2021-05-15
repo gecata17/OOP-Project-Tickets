@@ -180,6 +180,17 @@ void Vector<T>::popFront()
 }
 
 template <class T>
+bool Vector<T>::empty()
+{
+    if (this->data == nullptr)
+    {
+        std::cout << "Empty vector" << std::endl;
+        return true;
+    }
+    return false;
+}
+
+template <class T>
 const T& Vector<T>::operator[](int index) const
 {
     if (index >= 0 && index < size)

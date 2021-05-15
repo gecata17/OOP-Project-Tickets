@@ -25,6 +25,7 @@ public:
 	void pushFront(const T& element);//add element at the front
 	void popFront();//remove element at the front
 	
+	bool empty();
 
 
 

@@ -17,7 +17,7 @@ private:
    Date dateOfPurchase;
 
    int randomNumber();
-
+   
    Date currentDate(); 
 
 public:
@@ -31,8 +31,9 @@ public:
 
    String getReceipt() const;
    bool isPurchased() const;
+   bool isPurchasedInDateInterval(const Date& dateFrom, const Date& dateTo);
    void purchase();
-
+   
    int getTicketSerialNumber() const;
 
 };
