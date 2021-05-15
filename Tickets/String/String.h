@@ -15,27 +15,18 @@ public:
 	String(const size_t size);
 	String(const char* data);
 
-public:
+
 
 	int getSize() const;
 	String&  concat(const String & other);
 	void split(const char* delimiter);
-	void reverse();
 	bool empty();
 
-public:
-	
+
 	const char operator[](int )const;
 	char operator[](int );
-
-	String& operator+=(const String& other);
-	String operator+(const String& other) ;
-
-	
-    bool operator<(const String& other) const;
-    bool operator<=(const String& other) const;
-    bool operator>(const String& other) const;
-    bool operator>=(const String& other) const;
+    String& operator+=(const String&);
+	String operator+(const String&) ;
 
 	void append(const String&);
 	void pushBack(const char &element);

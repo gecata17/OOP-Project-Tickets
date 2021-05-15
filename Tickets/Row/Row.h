@@ -1,8 +1,8 @@
 #pragma once
 
 #include<iostream>
-#include "Vector.cpp"
-#include "Seat.cpp"
+#include "Vector.h"
+#include "Seat.h"
 class Row{
 private:
   int rowNumber;

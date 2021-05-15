@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include "String.cpp"
-#include "Date.cpp"
+#include "String.h"
+#include "Date.h"
 #include<ctime>
 #include<cstdlib>
 

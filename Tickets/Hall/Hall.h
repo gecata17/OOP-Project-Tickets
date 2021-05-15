@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
-#include "Show.cpp"
-#include "Date.cpp"
-#include "Vector.cpp"
+#include "Show.h"
+#include "Date.h"
+#include "Vector.h"
 class Hall{
 private:
    

@@ -76,16 +76,7 @@ char String::operator[](int index)
     return 0;
 }
 
-String &String::operator+=(const String &other)
-{
-    *this = *this + other;
-    return *this;
-}
 
-String String::operator+(const String &other)
-{
-    return *this + other;
-}
 
 String &String::concat(const String &other)
 {
@@ -231,32 +222,18 @@ unsigned String::find(const char *substring) const
         }
     }
 
-    throw std::out_of_range("No such substring!");
+    return -1;
 }
 
 
 
-bool String:: operator<(const String& other) const{
-    return this->data < other.data;
-}
 
-bool String:: operator<=(const String& other) const{
-    return this->data <= other.data;
-}
-
-bool String:: operator>(const String& other) const{
-    return this->data > other.data;
-}
-
-bool String:: operator>=(const String& other) const{
-    return this->data >= other.data;
-}
 
 std::istream& operator>>(std::istream& in, String& other)
 {
     std::cout<<"Enter string length: ";
     in>>other.size;
-    std::cout<<"\nEnter the string: ";
+    std::cout<<"Enter the string: "<<std::endl;
     in.getline(other.data, other.size);
     return in;
   

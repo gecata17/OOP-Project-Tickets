@@ -1,11 +1,11 @@
 #pragma once
 
 #include <iostream>
-#include "Vector.cpp"
+#include "Vector.h"
 #include "String.cpp"
-#include "Date.cpp"
-#include "Seat.cpp"
-#include "Row.cpp"
+#include "Date.h"
+#include "Seat.h"
+#include "Row.h"
 class Show{
 private:
    String showName;
