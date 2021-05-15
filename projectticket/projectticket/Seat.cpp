@@ -70,6 +70,11 @@ bool Seat::isPurchased() const
     return ticketSerialNumber != 0;
 }
 
+Date Seat::getDateOfPurchase() const
+{
+    return this->dateOfPurchase;
+}
+
 //bool Seat::isPurchasedInDateInterval(const Date& dateFrom, const Date& dateTo)
 //{
 //    return dateOfPurchase >= dateFrom && dateOfPurchase <= dateTo;

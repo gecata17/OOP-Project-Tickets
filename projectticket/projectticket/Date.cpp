@@ -25,16 +25,23 @@ size_t Date::reverse(size_t num) const
 
 Date::Date()
 {
-    this->date = "";
+
+    this->year = 0;
+    this->month = 0;
+    this->day = 0;
 }
 
-Date::Date(const String& date)
+Date::Date(const Date& other)
 {
-    this->date = date;
+    this->year = other.year;
+    this->month = other.month;
+    this->day = other.day;
 }
 
  Date::Date(size_t year, size_t month, size_t day)
+
  {
+
      if (month < 0 || month > 12) {
          
          std::cout << "Invalid month" << std::endl;
@@ -44,48 +51,57 @@ Date::Date(const String& date)
          std::cout << "Invalid day" << std::endl;
          return;
      }
-     String monthString = intToString(reverse(month));
-     String dayString = intToString(reverse(day));
 
- 	//date = intToString(reverse(year)) + "-" + monthString + "-" + dayString;
+     this->year=year;
+     this->month = month;
+     this->day = day;
+
+    
+
+ 	
  }
 
-// bool Date::operator==(const Date &other) const
-// {
-//     return this->date == other.date;
-// }
+ bool Date::operator==(const Date &other) const
+ {
+     return year == other.year && month == other.month && day == other.day;
+ }
+
+ bool Date::operator!=(const Date& other) const
+ {
+     return !(*this == other);
+ }
 
 // // "2000-01-11" < "2018-03-05"
 // // "2020-08-07" < "2021-08-07"
-// bool Date::operator<(const Date &other) const
-// {
-//     return this->date < other.date;
-// }
+ bool Date::operator<(const Date &other) const
+ {
+     return year < other.year && month < other.month && day <other.day;
+ }
 
-// bool Date::operator<=(const Date &other) const
-// {
-//     return this->date <= other.date;
-// }
+ bool Date::operator<=(const Date &other) const
+ {
+     return *this == other || *this < other;
+ }
 
-// bool Date::operator>(const Date &other) const
-// {
-//     return this->date > other.date;
-// }
+ bool Date::operator>(const Date &other) const
+ {
+     return !(*this <= other);
+ }
 
-// bool Date::operator>=(const Date &other) const
-// {
-//     return this->date >= other.date;
-// }
+ bool Date::operator>=(const Date &other) const
+ {
+     return !(*this < other);
+ }
 
 std::istream& operator>>(std::istream& in, Date& other)
 {
-    in >> other.date;
-    return in;
+    return in >> other.year>>other. month>>other.day;
+    
 }
 
 
 std::ostream& operator<<(std::ostream& out, const Date& other)
 {
-    out << other.date;
-    return out;
+    return out<<other.intToString(other.reverse(other.year)) <<"-"<< other.intToString(other.reverse(other.month))<< "-" << other.intToString(other.reverse(other.day));
+    
 }

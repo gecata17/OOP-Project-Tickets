@@ -19,7 +19,7 @@ private:
 
 	int randomNumber();
 
-	Date currentDate();
+
 
 public:
 	Seat();
@@ -27,11 +27,13 @@ public:
 	bool isBooked() const;
 	void book();
 	void unbook();
+	Date currentDate();
 
 	void setReceipt(const String& receipt);
 
 	String getReceipt() const;
 	bool isPurchased() const;
+	Date getDateOfPurchase() const;
 	//bool isPurchasedInDateInterval(const Date& dateFrom, const Date& dateTo);
 	void purchase();
 

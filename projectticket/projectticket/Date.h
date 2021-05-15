@@ -6,7 +6,6 @@
 class Date
 {
 private:
-	String date;
 	size_t year;
 	size_t day;
 	size_t month;
@@ -16,14 +15,15 @@ private:
 
 public:
 	Date();
-	Date(const String&);
+	Date(const Date&);
 	Date(size_t year, size_t month, size_t day);
 
-	/*bool operator==(const Date& other) const;
+	bool operator==(const Date& other) const;
+	bool operator!=(const Date& other) const;
 	bool operator<(const Date& other) const;
 	bool operator<=(const Date& other) const;
 	bool operator>(const Date& other) const;
-	bool operator>=(const Date& other) const;*/
+	bool operator>=(const Date& other) const;
 
 	friend std::istream& operator>>(std::istream& in, Date& other);
 	friend std::ostream& operator<<(std::ostream& out, const Date& other);

@@ -1,30 +1,29 @@
 #include <iostream>
 #include "String.h"
 #include "Vector.hpp"
-
+#include "Seat.h"
 int main()
 
 {
-    String test;
-    test.pushBack('1');
-    test.pushBack('6');
-   
-
-    String test2;
-    test2.pushBack('|');
-
-    Vector<char> tester;
-    tester.pushBack('5');
-    /*std::cout << tester[10];*/
-    try {
-        std::cout << tester[10]<<std::endl;
-
-    }
-    catch (const char* e) {
-        std::cout << e;
-    }
-    std::cout<<"hello world"<<std::endl;
     
+    Date date1(2014, 5, 17);
+    Date date2(2014, 5, 17);
+    Date date3(2024, 5, 17);
+    std::cout << (date1 == date2) << std::endl;
+    std::cout << (date1 != date3) << std::endl;
 
+
+    Date date5(2014, 5, 17);
+    Date date6(2015, 6, 18);
+    Date date7(2016, 7, 19);
+    std::cout << (date5 < date6) << std::endl;
+    std::cout << (date7 >= date6) << std::endl;
+    std::cout << (date5 <= date6) << std::endl;
+    std::cout << (date7 > date6) << std::endl;
+    std::cout << date5<<std::endl;
+
+    Vector<Seat> seats;
+    seats.pushBack(Seat(4, 5));
+    std::cout << seats[0].currentDate();
     return 0;
 }
