@@ -22,7 +22,7 @@ String Show::getShowName() const
     return this->showName;
 }
 
-int Show::getNumberOfColumns() const
+size_t Show::getNumberOfColumns() const
 {
     if (rows.empty())
     {
@@ -34,7 +34,7 @@ int Show::getNumberOfColumns() const
     }
 }
 
-int Show::getAllSeats() const
+size_t Show::getAllSeats() const
 {
     if (rows.empty())
     {
@@ -46,7 +46,7 @@ int Show::getAllSeats() const
     }
 }
 
-int Show::getBookedSeats() const
+size_t Show::getBookedSeats() const
 {
     int counter = 0;
     for (int i = 0; i < rows.getSize(); i++)
@@ -63,12 +63,12 @@ int Show::getBookedSeats() const
     return counter;
 }
 
-int Show::getFreeSeats() const
+size_t Show::getFreeSeats() const
 {
     return getAllSeats() - getBookedSeats();
 }
 
-int Show::getBookedSeatsWhichAreNotPurchased() const
+size_t Show::getBookedSeatsWhichAreNotPurchased() const
 {
     int counter = 0;
     for (int i = 0; i < rows.getSize(); i++)
@@ -84,37 +84,37 @@ int Show::getBookedSeatsWhichAreNotPurchased() const
     return counter;
 }
 
-//int Show::getPurchasedSeatsInDateInterval(const Date& dateFrom, const Date& dateTo) const
-//{
-//    int counter = 0;
-//    for (int i = 0; i < rows.getSize(); i++)
-//    {
-//        for (int j = 0; j < rows[i].getSize(); j++)
-//        {
-//            if (rows[i][j].isPurchasedInDateInterval(dateFrom, dateTo))
-//            {
-//                counter++;
-//            }
-//        }
-//    }
-//    return counter;
-//}
+size_t Show::getPurchasedSeatsInDateInterval(const Date& dateFrom, const Date& dateTo) const
+{
+    int counter = 0;
+    for (int i = 0; i < rows.getSize(); i++)
+    {
+        for (int j = 0; j < rows[i].getSize(); j++)
+        {
+            if (rows[i][j].isPurchasedInDateInterval(dateFrom, dateTo))
+            {
+                counter++;
+            }
+        }
+    }
+    return counter;
+}
 
-//int Show::getSeatNumber(int serialNumber)
-//{
-//    for (int i = 0; i < rows.getSize(); i++)
-//    {
-//        for (int j = 0; j < rows[i].getSize(); j++)
-//        {
-//            if (rows[i][j].getTicketSerialNumber() == serialNumber)
-//            {
-//                return j;
-//            }
-//        }
-//    }
-//
-//    return -1;
-//}
+size_t Show::getSeatNumber(size_t serialNumber) const
+{
+    for (int i = 0; i < rows.getSize(); i++)
+    {
+        for (int j = 0; j < rows[i].getSize(); j++)
+        {
+            if (rows[i][j].getTicketSerialNumber() == serialNumber)
+            {
+                return j;
+            }
+        }
+    }
+
+    throw "Invalid serial number";
+}
 
 Date Show::getDate() const
 {

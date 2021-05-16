@@ -20,13 +20,13 @@ public:
 	
 
 	String getShowName() const;
-	int getNumberOfColumns() const;
-	int getAllSeats() const;
-	int getBookedSeats() const;
-	int getFreeSeats() const;
-	int getBookedSeatsWhichAreNotPurchased() const;
-	//int getPurchasedSeatsInDateInterval(const Date& dateFrom, const Date& dateTo) const;
-	//int getSeatNumber(int serialNumber);
+	size_t getNumberOfColumns() const;
+	size_t getAllSeats() const;
+	size_t getBookedSeats() const;
+	size_t getFreeSeats() const;
+	size_t getBookedSeatsWhichAreNotPurchased() const;
+	size_t getPurchasedSeatsInDateInterval(const Date& dateFrom, const Date& dateTo) const;
+	size_t getSeatNumber(size_t serialNumber) const;
 
 	Date getDate() const;
 

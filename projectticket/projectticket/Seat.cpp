@@ -75,10 +75,10 @@ Date Seat::getDateOfPurchase() const
     return this->dateOfPurchase;
 }
 
-//bool Seat::isPurchasedInDateInterval(const Date& dateFrom, const Date& dateTo)
-//{
-//    return dateOfPurchase >= dateFrom && dateOfPurchase <= dateTo;
-//}
+bool Seat::isPurchasedInDateInterval(const Date& dateFrom, const Date& dateTo) const
+{
+    return dateOfPurchase >= dateFrom && dateOfPurchase <= dateTo;
+}
 
 void Seat::purchase()
 {
@@ -89,3 +89,9 @@ void Seat::purchase()
         dateOfPurchase = currentDate();
     }
 }
+
+size_t Seat::getTicketSerialNumber() const
+{
+    return ticketSerialNumber;
+}
+

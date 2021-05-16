@@ -34,9 +34,9 @@ public:
 	String getReceipt() const;
 	bool isPurchased() const;
 	Date getDateOfPurchase() const;
-	//bool isPurchasedInDateInterval(const Date& dateFrom, const Date& dateTo);
+	bool isPurchasedInDateInterval(const Date& dateFrom, const Date& dateTo) const;
 	void purchase();
 
-	//int getTicketSerialNumber() const;
+	size_t getTicketSerialNumber() const;
 
 };
