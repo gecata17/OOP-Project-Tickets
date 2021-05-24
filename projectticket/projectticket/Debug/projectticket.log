@@ -1,6 +1,7 @@
 ﻿  Date.cpp
 D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Date.cpp(10,28): warning C4267: 'argument': conversion from 'size_t' to 'const char', possible loss of data
   Hall.cpp
+  main.cpp
   projectticket.cpp
   Row.cpp
   Seat.cpp
@@ -8,7 +9,7 @@ D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Seat.cpp(6,15): wa
   Show.cpp
 D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(126,90): warning C4018: '<': signed/unsigned mismatch
   String.cpp
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(64,29): warning C4018: '<': signed/unsigned mismatch
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(73,29): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(69): warning C4715: 'String::operator[]': not all control paths return a value
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(79): warning C4715: 'String::operator[]': not all control paths return a value
   projectticket.vcxproj -> D:\CPPproject\OOP-Project-Tickets\projectticket\Debug\projectticket.exe

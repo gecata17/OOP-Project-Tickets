@@ -20,12 +20,12 @@ int Row::getSize() const
     return seats.getSize();
 }
 
-Seat& Row::operator[](int index)
+Seat& Row::operator[](size_t index)
 {
     return seats[index];
 }
 
-const Seat& Row::operator[](int index) const
+const Seat& Row::operator[](size_t index) const
 {
     return seats[index];
 }

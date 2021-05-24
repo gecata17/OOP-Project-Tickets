@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Hall.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="projectticket.cpp" />
     <ClCompile Include="Row.cpp" />
     <ClCompile Include="Seat.cpp" />

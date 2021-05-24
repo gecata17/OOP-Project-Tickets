@@ -10,7 +10,7 @@ public:
 	Row();
 	Row(int rowNumber, int numberOfSeats);
 	int getSize() const;
-	Seat& operator[] (int index);
-	const Seat& operator[] (int index) const;
+	Seat& operator[] (size_t index);
+	const Seat& operator[] (size_t index) const;
 
 };

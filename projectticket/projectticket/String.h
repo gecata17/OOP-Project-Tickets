@@ -22,10 +22,11 @@ public:
 	bool empty();
 
 
-	const char operator[](int)const;
-	char operator[](int);
+	const char& operator[](size_t)const;
+	char& operator[](size_t);
 	String& operator+=(const String&);
 	String operator+(const String&);
+    bool operator==(const String& );
 
 	void append(const String&);
 	void pushBack(const char& element);

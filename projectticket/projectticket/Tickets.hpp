@@ -11,7 +11,7 @@ private:
 	Vector<Hall> halls;
 	Vector<Show> shows;
 public:
-	/*Show* findShow(const String& showName, const Date& date) {
+	Show* findShow(const String& showName, const Date& date) {
 		for (int i = 0; i < shows.getSize(); i++)
 		{
 			if (shows[i].getShowName() == showName && shows[i].getDate() == date) {
@@ -20,7 +20,7 @@ public:
 
 		}
 		return nullptr;
-	}*/
+	}
 
 	void addEvent() {
 		Date date;
@@ -164,39 +164,39 @@ public:
 		}
 	}*/
 
-	//void run() {
-	//	std::cout << "Please enter all dates in the format : YYYY-MM-DD" << std::endl;
+	void run() {
+		std::cout << "Please enter all dates in the format : YYYY-MM-DD" << std::endl;
 
-	//	String command;
+		String command;
 
-	//	while (true) {
-	//		std::cin >> command;
+		while (true) {
+			std::cin >> command;
 
-	//		if (command == "addevent") {
-	//			addEvent();
-	//		}
-	//		else if (command == "freeseats") {
-	//			freeSeats();
-	//		}
-	//		else if (command == "freeseats") {
-	//			book();
-	//		}
-	//		else if (command == "freeseats") {
-	//			unbook();
-	//		}
-	//		else if (command == "freeseats") {
-	//			buy();
-	//		}
-	//		else if (command == "freeseats") {
-	//			//bookings();
-	//		}
-	//		else if (command == "freeseats") {
-	//			check();
-	//		}
-	//		else if (command == "freeseats") {
-	//			report();
-	//		}
-	//	}
-	
+			if (command == "addevent") {
+				addEvent();
+			}
+			else if (command == "freeseats") {
+				freeSeats();
+			}
+			else if (command == "book") {
+				book();
+			}
+			else if (command == "unbook") {
+				unbook();
+			}
+			else if (command == "buy") {
+				buy();
+			}
+			/*else if (command == "bookings") {
+				bookings();
+			}*/
+			else if (command == "check") {
+				check();
+			}
+			/*else if (command == "report") {
+				report();
+			}*/
+		}
+	}
 	
 };

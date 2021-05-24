@@ -4,8 +4,8 @@
 void String::copy(const String& other)
 {
     this->size = other.size;
-    this->data = new char[other.size];
-    for (size_t i = 0; i < size; i++)
+    this->data = new char[this->size];
+    for (size_t i = 0; i < this->size; i++)
     {
         this->data[i] = other.data[i];
     }
@@ -59,22 +59,36 @@ int String::getSize() const
 }
 
 
-const char String::operator[](int index) const
+const char& String::operator[](size_t index) const
 {
-    if (index >= 0 && index < size)
+    if (index < size)
     {
         return data[index];
     }
-    return 0;
+   
 }
 
-char String::operator[](int index)
+char& String::operator[](size_t index)
 {
-    if (index >= 0 && index < size)
+    if (index < size)
     {
         return data[index];
     }
-    return 0;
+   
+    
+}
+
+String& String::operator+=(const String& other)
+{
+    return *this = *this + other;
+}
+
+String String::operator+(const String& other)
+{
+    String sum(*this);
+    sum += other;
+
+    return sum;
 }
 
 
@@ -147,6 +161,24 @@ void String::swap(const String& other)
         other.data[i] = swapper[i];
     }
     delete[] swapper;
+}
+
+bool String::operator==(const String& other)
+{
+    int i = 0;
+    for (; this->data[i] != '\0'; i++)
+    {
+        if (this->data[i] != other.data[i])
+        {
+            return false;
+        }
+    }
+    if (other.data[i] != '\0')
+    {
+        return false;
+    }
+
+    return true;
 }
 
 void String::append(const String& other)
