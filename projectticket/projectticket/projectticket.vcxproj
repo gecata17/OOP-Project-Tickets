@@ -154,6 +154,7 @@
     <ClInclude Include="Seat.h" />
     <ClInclude Include="Show.h" />
     <ClInclude Include="String.h" />
+    <ClInclude Include="Tickets.hpp" />
     <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

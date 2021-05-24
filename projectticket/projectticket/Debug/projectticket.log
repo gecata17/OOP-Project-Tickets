@@ -1,13 +1,14 @@
 ﻿  Date.cpp
 D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Date.cpp(10,28): warning C4267: 'argument': conversion from 'size_t' to 'const char', possible loss of data
+  Hall.cpp
+  projectticket.cpp
+  Row.cpp
+  Seat.cpp
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Seat.cpp(6,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Show.cpp
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Vector.hpp(52,23): warning C4018: '<': signed/unsigned mismatch
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Vector.hpp(48): message : while compiling class template member function 'void Vector<Seat>::copy(const Vector<Seat> &)'
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Vector.hpp(84): message : see reference to function template instantiation 'void Vector<Seat>::copy(const Vector<Seat> &)' being compiled
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Vector.hpp(60): message : while compiling class template member function 'void Vector<Seat>::destroy(void)'
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Vector.hpp(92): message : see reference to function template instantiation 'void Vector<Seat>::destroy(void)' being compiled
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Vector.hpp(91): message : while compiling class template member function 'Vector<Seat>::~Vector(void)'
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(18): message : see reference to function template instantiation 'Vector<Seat>::~Vector(void)' being compiled
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Row.h(8): message : see reference to class template instantiation 'Vector<Seat>' being compiled
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(126,90): warning C4018: '<': signed/unsigned mismatch
+  String.cpp
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(64,29): warning C4018: '<': signed/unsigned mismatch
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(73,29): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   projectticket.vcxproj -> D:\CPPproject\OOP-Project-Tickets\projectticket\Debug\projectticket.exe

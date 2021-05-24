@@ -5,10 +5,9 @@ class String {
 private:
 	char* data;
 	size_t size;
+public:
 	void copy(const String& other);
 	void clear();
-public:
-	
 	String();
 	String(const String&);
 	String& operator=(const String&);
@@ -25,8 +24,8 @@ public:
 
 	const char operator[](int)const;
 	char operator[](int);
-	/*String& operator+=(const String&);
-	String operator+(const String&);*/
+	String& operator+=(const String&);
+	String operator+(const String&);
 
 	void append(const String&);
 	void pushBack(const char& element);

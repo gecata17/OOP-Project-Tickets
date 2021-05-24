@@ -48,19 +48,19 @@ void Hall::book(const Date& date)
     bookedDates.pushBack(date);
 }
 
-//bool Hall::isFree(const Date& date) const
-//{
-//    for (size_t i = 0; i < bookedDates.getSize(); i++)
-//    {
-//        if (bookedDates[i] == date)
-//        {
-//            return false;
-//        }
-//    }
-//    return true;
-//}
-//
-//bool Hall::isBooked(const Date& date) const
-//{
-//    return !isFree(date);
-//}
+bool Hall::isFree(const Date& date) const
+{
+    for (int i = 0; i < bookedDates.getSize(); i++)
+    {
+        if (bookedDates[i] == date)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool Hall::isBooked(const Date& date) const
+{
+    return !isFree(date);
+}

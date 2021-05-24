@@ -20,12 +20,12 @@ public:
     void setNumberColumns(const int numberSeatsPerRows);
 
     size_t getHallNumber() const;
-    int getNumberRows() const const;
+    int getNumberRows() const;
     int getNumberColumns() const;
 
     void book(const Date& date);
-    //bool isFree(const Date& date) const;
-    //bool isBooked(const Date& date) const;
+    bool isFree(const Date& date) const;
+    bool isBooked(const Date& date) const;
 
 
 };

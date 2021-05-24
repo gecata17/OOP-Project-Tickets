@@ -1,3 +1,4 @@
+
 #include "String.h"
 
 void String::copy(const String& other)
@@ -48,8 +49,8 @@ String::String(const size_t size)
 
 String::String(const char* data)
 {
-    this->data = new char[this->size];
-    
+    this->data = new char[strlen(data)+1];
+    strcpy_s(this->data, strlen(data) + 1, data);
 }
 
 int String::getSize() const
@@ -80,25 +81,16 @@ char String::operator[](int index)
 
 String& String::concat(const String& other)
 {
-    char* tmp = new char[size];
-    strcpy_s(tmp, size +1,data);
-
-    int i = strlen(tmp);
-    int k = 0;
-
-    this->size += other.size;
-
-    delete[] this->data;
-    this->data = new char[this->size];
-
-    strcpy_s(data, size + 1,tmp);
-
-    for (i; i < this->size; i++)
+    for (size_t i = 0; i < size; i++)
     {
-        this->data[i] = other.data[k];
-        k++;
+        this->data[this->size] = data[size];
     }
 
+    for (size_t i = this->size; i = this->size < other.size; i++)
+    {
+        this->data[this->size] = other.data[other.size];
+        this->size++;
+    }
     return *this;
 }
 
@@ -182,6 +174,13 @@ void String::append(const String& other)
 
 void String::pushBack(const char& element)
 {
+
+    if (this->data == nullptr) {
+        this->data = new char[1];
+        this->data[0] = element;
+        this->size = 1;
+        return;
+    }
     char* newStr = new char[this->size + 1];
     for (size_t i = 0; i < this->size; i++)
     {
@@ -242,7 +241,6 @@ std::istream& operator>>(std::istream& in, String& other)
 {
     std::cout << "Enter string length: ";
     in >> other.size;
-    //in.clear()
     std::cout << "Enter the string: " << std::endl;
     in.getline(other.data, other.size);
     return in;

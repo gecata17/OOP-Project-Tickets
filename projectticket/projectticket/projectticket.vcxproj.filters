@@ -59,5 +59,8 @@
     <ClInclude Include="Hall.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Tickets.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

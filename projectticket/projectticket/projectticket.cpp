@@ -25,5 +25,8 @@ int main()
     Vector<Seat> seats;
     seats.pushBack(Seat(4, 5));
     std::cout << seats[0].currentDate();
+  /* 
+    String receipt ();
+    receipt.append("s")*/
     return 0;
 }

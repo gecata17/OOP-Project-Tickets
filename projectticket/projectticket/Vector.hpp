@@ -49,7 +49,7 @@ void Vector<T>::copy(const Vector<T>& other)
     this->size = other.size;
     this->capacity = other.capacity;
     this->data = new T[other.size];
-    for (int i = 0; i < size; i++)
+    for (size_t i = 0; i < this->size; i++)
     {
         this->data[i] = other.data[i];
     }
