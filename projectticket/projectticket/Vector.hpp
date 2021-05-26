@@ -95,13 +95,13 @@ Vector<T>::~Vector()
 template <class T>
 void Vector<T>::resize()
 {
-    T* temp = new T[this->capacity * 2];
     this->capacity *= 2;
+    T* temp = new T[this->capacity];
     for (size_t i = 0; i < this->size; i++)
     {
         temp[i] = this->data[i];
     }
-    this->destroy();
+    destroy();
     this->data = temp;
 }
 
@@ -209,17 +209,10 @@ void Vector<T>::popFront()
         std::cout << "Vector is empty!" << std::endl;
         return;
     }
-
-    --this->size;
-    T* array = new T[this->size];
-
-    for (size_t i = this->size - 1; i >= 0; i--)
-    {
-        array[i] = this->data[i];
+    for (size_t i = 0; i < this->size; ++i) {
+        this->data[i] = this->data[i + 1];
     }
-
-    delete[] this->data;
-    this->data = array;
+    --this->size;
 }
 
 template <class T>

@@ -30,10 +30,10 @@ public:
 
 	Date getDate() const;
 
-	bool isValid(int rowNumber, int seatNumber) const;
-	bool isBooked(int rowNumber, int seatNumber) const;
-	bool isPurchased(int rowNumber, int seatNumber) const;
-	void bookSeat(int rowNumber, int seatNumber, const String& receipt);
-	void unbookSeat(int rowNumber, int seatNumber);
-	void purchaseTicket(int rowNumber, int seatNumber);
+	bool isValid(size_t rowNumber, size_t seatNumber) const;
+	bool isBooked(size_t rowNumber, size_t seatNumber) const;
+	bool isPurchased(size_t rowNumber, size_t seatNumber) const;
+	void bookSeat(size_t rowNumber, size_t seatNumber, const String& receipt);
+	void unbookSeat(size_t rowNumber, size_t seatNumber);
+	void purchaseTicket(size_t rowNumber, size_t seatNumber);
 };

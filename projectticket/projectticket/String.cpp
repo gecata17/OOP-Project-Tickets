@@ -45,6 +45,7 @@ String::~String()
 String::String(const size_t size)
 {
     this->size = size;
+    this->data = new char[this->size];
 }
 
 String::String(const char* data)

@@ -121,22 +121,22 @@ Date Show::getDate() const
     return this->date;
 }
 
-bool Show::isValid(int rowNumber, int seatNumber) const
+bool Show::isValid(size_t rowNumber, size_t seatNumber) const
 {
     return 0 <= rowNumber && rowNumber < rows.getSize() && 0 <= seatNumber && seatNumber < getNumberOfColumns();
 }
 
-bool Show::isBooked(int rowNumber, int seatNumber) const
+bool Show::isBooked(size_t rowNumber, size_t seatNumber) const
 {
     return rows[rowNumber][seatNumber].isBooked();
 }
 
-bool Show::isPurchased(int rowNumber, int seatNumber) const
+bool Show::isPurchased(size_t rowNumber, size_t seatNumber) const
 {
     return rows[rowNumber][seatNumber].isPurchased();
 }
 
-void Show::bookSeat(int rowNumber, int seatNumber, const String& receipt)
+void Show::bookSeat(size_t rowNumber, size_t seatNumber, const String& receipt)
 {
     if (!isBooked(rowNumber, seatNumber))
     {
@@ -145,7 +145,7 @@ void Show::bookSeat(int rowNumber, int seatNumber, const String& receipt)
     }
 }
 
-void Show::unbookSeat(int rowNumber, int seatNumber)
+void Show::unbookSeat(size_t rowNumber, size_t seatNumber)
 {
     if (isBooked(rowNumber, seatNumber))
     {
@@ -154,7 +154,7 @@ void Show::unbookSeat(int rowNumber, int seatNumber)
     }
 }
 
-void Show::purchaseTicket(int rowNumber, int seatNumber)
+void Show::purchaseTicket(size_t rowNumber, size_t seatNumber)
 {
     if (!isPurchased(rowNumber, seatNumber))
     {

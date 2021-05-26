@@ -5,7 +5,7 @@ Row::Row()
     rowNumber = 0;
 }
 
-Row::Row(int rowNumber, int numberOfSeats)
+Row::Row(size_t rowNumber, size_t numberOfSeats)
 {
     this->rowNumber = rowNumber;
     for (int i = 0; i < numberOfSeats; i++)
@@ -15,7 +15,7 @@ Row::Row(int rowNumber, int numberOfSeats)
     }
 }
 
-int Row::getSize() const
+size_t Row::getSize() const
 {
     return seats.getSize();
 }

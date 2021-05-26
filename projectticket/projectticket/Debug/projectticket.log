@@ -1,15 +1,15 @@
-﻿  Date.cpp
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Date.cpp(10,28): warning C4267: 'argument': conversion from 'size_t' to 'const char', possible loss of data
-  Hall.cpp
-  main.cpp
-  projectticket.cpp
+﻿  Hall.cpp
   Row.cpp
-  Seat.cpp
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Seat.cpp(6,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Row.cpp(11,23): warning C4018: '<': signed/unsigned mismatch
   Show.cpp
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(126,90): warning C4018: '<': signed/unsigned mismatch
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(54,27): warning C4018: '<': signed/unsigned mismatch
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(76,27): warning C4018: '<': signed/unsigned mismatch
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(92,27): warning C4018: '<': signed/unsigned mismatch
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(107,27): warning C4018: '<': signed/unsigned mismatch
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Show.cpp(126,40): warning C4018: '<': signed/unsigned mismatch
   String.cpp
+  main.cpp
   Generating Code...
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(69): warning C4715: 'String::operator[]': not all control paths return a value
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(79): warning C4715: 'String::operator[]': not all control paths return a value
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(70): warning C4715: 'String::operator[]': not all control paths return a value
+D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\String.cpp(80): warning C4715: 'String::operator[]': not all control paths return a value
   projectticket.vcxproj -> D:\CPPproject\OOP-Project-Tickets\projectticket\Debug\projectticket.exe

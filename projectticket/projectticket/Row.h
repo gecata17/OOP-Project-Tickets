@@ -4,12 +4,12 @@
 #include "Seat.h"
 class Row {
 private:
-	int rowNumber;
+	size_t rowNumber;
 	Vector<Seat>seats;
 public:
 	Row();
-	Row(int rowNumber, int numberOfSeats);
-	int getSize() const;
+	Row(size_t rowNumber, size_t numberOfSeats);
+	size_t getSize() const;
 	Seat& operator[] (size_t index);
 	const Seat& operator[] (size_t index) const;
 
