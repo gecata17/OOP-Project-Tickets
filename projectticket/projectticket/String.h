@@ -34,7 +34,7 @@ public:
 
 	unsigned find(const char* substring) const;
 	void compare(const String&);
-	void swap(const String&);
+
 
 	friend std::istream& operator>>(std::istream& in, String& other);
 	friend std::ostream& operator<<(std::ostream& out, const String& other);

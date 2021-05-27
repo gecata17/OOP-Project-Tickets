@@ -35,8 +35,8 @@ public:
 
 
 	//getters
-	int getCapacity() const;
-	int getSize() const;
+	size_t getCapacity() const;
+	size_t getSize() const;
 
 	//print method
 	void print() const;
@@ -250,13 +250,13 @@ T& Vector<T>::operator[](size_t index)
 
 
 template <class T>
-int Vector<T>::getCapacity() const
+size_t Vector<T>::getCapacity() const
 {
     return this->capacity;
 }
 
 template <class T>
-int Vector<T>::getSize() const
+size_t Vector<T>::getSize() const
 {
     return this->size;
 }

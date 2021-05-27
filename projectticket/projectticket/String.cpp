@@ -50,8 +50,9 @@ String::String(const size_t size)
 
 String::String(const char* data)
 {
-    this->data = new char[strlen(data)+1];
-    strcpy_s(this->data, strlen(data) + 1, data);
+    this->size = strlen(data);
+    this->data = new char[this->size+1];
+    strcpy_s(this->data, this->size + 1, data);
 }
 
 int String::getSize() const
@@ -62,21 +63,12 @@ int String::getSize() const
 
 const char& String::operator[](size_t index) const
 {
-    if (index < size)
-    {
-        return data[index];
-    }
-   
+    return data[index];  
 }
 
 char& String::operator[](size_t index)
 {
-    if (index < size)
-    {
-        return data[index];
-    }
-   
-    
+    return data[index];
 }
 
 String& String::operator+=(const String& other)
@@ -142,27 +134,7 @@ void String::compare(const String& other)
     }
 }
 
-void String::swap(const String& other)
-{
 
-    char* swapper = new char[this->size];
-    for (size_t i = 0; i < this->size; i++)
-    {
-        swapper[i] = this->data[i];
-    }
-    this->data = new char[strlen(data) + 1];
-    for (size_t i = 0; data[i]; ++i)
-    {
-        this->data[i] = data[i];
-    }
-    this->data[strlen(data)] = '\0';
-
-    for (size_t i = 0; i < this->size; i++)
-    {
-        other.data[i] = swapper[i];
-    }
-    delete[] swapper;
-}
 
 bool String::operator==(const String& other)
 {
@@ -231,12 +203,14 @@ void String::popback()
     if (this->data == nullptr)
     {
         std::cout << "Empty string" << std::endl;
+        return;
     }
     --this->size;
     char* newStr = new char[this->size];
+
     for (size_t i = 0; i < this->size; i++)
     {
-        newStr[i] = data[i];
+        newStr[i] = this->data[i];
     }
     delete[] this->data;
     this->data = newStr;

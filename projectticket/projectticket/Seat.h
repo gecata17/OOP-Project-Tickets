@@ -10,11 +10,11 @@
 class Seat {
 
 private:
-	int rowNumber;
-	int seatNumber;
+	size_t rowNumber;
+	size_t seatNumber;
 	bool isBookedSeat;
 	String receipt;
-	int ticketSerialNumber;
+	size_t ticketSerialNumber;
 	Date dateOfPurchase;
 
 	int randomNumber();
@@ -23,7 +23,7 @@ private:
 
 public:
 	Seat();
-	Seat(int rowNumber, int seatNumber);
+	Seat(size_t rowNumber, size_t seatNumber);
 	bool isBooked() const;
 	void book();
 	void unbook();

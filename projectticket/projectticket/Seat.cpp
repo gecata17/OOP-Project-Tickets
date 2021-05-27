@@ -31,7 +31,7 @@ Seat::Seat()
     this->receipt = "";
     this->ticketSerialNumber = 0;
 }
-Seat::Seat(int rowNumber, int seatNumber)
+Seat::Seat(size_t rowNumber, size_t seatNumber)
 {
     this->rowNumber = rowNumber;
     this->seatNumber = seatNumber;
@@ -87,6 +87,9 @@ void Seat::purchase()
         book();
         ticketSerialNumber = (rowNumber * 100 + seatNumber) * 10000 + randomNumber();
         dateOfPurchase = currentDate();
+    }
+    if (isPurchased()) {
+        std::cout << "This seat has already been purchased" << std::endl;
     }
 }
 

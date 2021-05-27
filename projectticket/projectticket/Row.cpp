@@ -8,7 +8,7 @@ Row::Row()
 Row::Row(size_t rowNumber, size_t numberOfSeats)
 {
     this->rowNumber = rowNumber;
-    for (int i = 0; i < numberOfSeats; i++)
+    for (size_t i = 0; i < numberOfSeats; i++)
     {
         Seat seat(rowNumber, i);
         seats.pushBack(seat);

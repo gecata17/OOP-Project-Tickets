@@ -15,7 +15,7 @@ private:
 
 public:
 	Show();
-	Show(const String& showName, int numberRows, int numberColumns, const Date& date);
+	Show(const String& showName, size_t numberRows, size_t numberColumns, const Date& date);
 
 	
 

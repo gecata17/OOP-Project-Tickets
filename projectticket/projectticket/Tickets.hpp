@@ -12,7 +12,7 @@ private:
 	Vector<Show> shows;
 public:
 	Show* findShow(const String& showName, const Date& date) {
-		for (int i = 0; i < shows.getSize(); i++)
+		for (size_t i = 0; i < shows.getSize(); i++)
 		{
 			if (shows[i].getShowName() == showName && shows[i].getDate() == date) {
 				return &(shows[i]);
@@ -131,7 +131,7 @@ public:
 	void check() {
 		int serialNumber;
 		std::cin >> serialNumber;
-		for (int i = 0; i < shows.getSize(); i++)
+		for (size_t i = 0; i < shows.getSize(); i++)
 		{
 			int seatNumber = shows[i].getSeatNumber(serialNumber);
 			if (seatNumber != -1) {

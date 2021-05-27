@@ -5,12 +5,12 @@ Show::Show()
     this->showName = nullptr;
 }
 
-Show::Show(const String& showName, int numberRows, int numberColumns, const Date& date)
+Show::Show(const String& showName, size_t numberRows, size_t numberColumns, const Date& date)
 {
     this->showName = showName;
     this->date = date;
 
-    for (int i = 0; i < numberRows; i++)
+    for (size_t i = 0; i < numberRows; i++)
     {
         Row newRow(i, numberColumns);
         rows.pushBack(newRow);
@@ -49,9 +49,9 @@ size_t Show::getAllSeats() const
 size_t Show::getBookedSeats() const
 {
     int counter = 0;
-    for (int i = 0; i < rows.getSize(); i++)
+    for (size_t i = 0; i < rows.getSize(); i++)
     {
-        for (int j = 0; j < rows[i].getSize(); j++)
+        for (size_t j = 0; j < rows[i].getSize(); j++)
         {
             if (rows[i][j].isBooked())
             {
@@ -71,9 +71,9 @@ size_t Show::getFreeSeats() const
 size_t Show::getBookedSeatsWhichAreNotPurchased() const
 {
     int counter = 0;
-    for (int i = 0; i < rows.getSize(); i++)
+    for (size_t i = 0; i < rows.getSize(); i++)
     {
-        for (int j = 0; j < rows[i].getSize(); j++)
+        for (size_t j = 0; j < rows[i].getSize(); j++)
         {
             if (rows[i][j].isBooked() && !rows[i][j].isPurchased())
             {
@@ -87,12 +87,12 @@ size_t Show::getBookedSeatsWhichAreNotPurchased() const
 size_t Show::getPurchasedSeatsInDateInterval(const Date& dateFrom, const Date& dateTo) const
 {
     int counter = 0;
-    for (int i = 0; i < rows.getSize(); i++)
+    for (size_t i = 0; i < rows.getSize(); i++)
     {
-        for (int j = 0; j < rows[i].getSize(); j++)
+        for (size_t j = 0; j < rows[i].getSize(); j++)
         {
             if (rows[i][j].isPurchasedInDateInterval(dateFrom, dateTo))
-            {
+            { 
                 counter++;
             }
         }
@@ -102,9 +102,9 @@ size_t Show::getPurchasedSeatsInDateInterval(const Date& dateFrom, const Date& d
 
 size_t Show::getSeatNumber(size_t serialNumber) const
 {
-    for (int i = 0; i < rows.getSize(); i++)
+    for (size_t i = 0; i < rows.getSize(); i++)
     {
-        for (int j = 0; j < rows[i].getSize(); j++)
+        for (size_t j = 0; j < rows[i].getSize(); j++)
         {
             if (rows[i][j].getTicketSerialNumber() == serialNumber)
             {
