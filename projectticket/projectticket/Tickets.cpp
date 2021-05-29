@@ -118,6 +118,55 @@ void Tickets:: buy() {
 	}
 }
 
+//void Tickets::bookings()
+//{
+//	if (std::cin.peek() == '\n') {
+//		for (int i = 0; i < shows.getSize(); i++)
+//		{
+//			std::cout << shows[i].getShowName() << ", " << shows[i].getDate() << ": " << shows[i].getBookedSeatsWhichAreNotPurchased() << std::endl;
+//
+//		}
+//	}
+//	else {
+//		String temporary;
+//		std::cin >> temporary;
+//		if (std::cin.peek() == '\n') {
+//			if (isDate(temporary)) {
+//				for (size_t i = 0; i < shows.getSize(); i++)
+//				{
+//					if (shows[i].getDate() == temporary) {
+//						std::cout << shows[i].getShowName() << ": " << shows[i].getBookedSeatsWhichAreNotPurchased() << std::endl;
+//					}
+//				}
+//			}
+//
+//			else {
+//				for (size_t i = 0; i < shows.getSize(); i++) {
+//
+//					if (shows[i].getShowName() == temporary) {
+//
+//						std::cout << shows[i].getDate() << ": " << shows[i].getBookedSeatsWhichAreNotPurchased() << std::endl;
+//					}
+//				}
+//			}
+//		}
+//		else {
+//			Date date(temporary);
+//			String showName;
+//			std::cin >> showName;
+//
+//			Show* foundShow = findShow(showName, date);
+//
+//			if (foundShow != nullptr) {
+//				std::cout << foundShow->getBookedSeatsWhichAreNotPurchased() << std::endl;
+//			}
+//			else {
+//				std::cout << "Event not found" << std::endl;
+//			}
+//		}
+//	}
+//}
+
 void Tickets:: check() {
 	int serialNumber;
 	std::cin >> serialNumber;

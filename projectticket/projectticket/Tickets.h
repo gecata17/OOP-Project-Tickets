@@ -18,6 +18,7 @@ public:
 	void book();
     void unbook();
     void buy();
+    void bookings();
     void check();
     //void report();
 
