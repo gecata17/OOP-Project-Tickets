@@ -15,12 +15,9 @@ public:
 	String(const size_t size);
 	String(const char* data);
 
-
-
-	int getSize() const;
+	size_t getSize() const;
 	String& concat(const String& other);
 	bool empty();
-
 
 	const char& operator[](size_t)const;
 	char& operator[](size_t);
@@ -31,11 +28,8 @@ public:
 	void append(const String&);
 	void pushBack(const char& element);
 	void popback();
-
-	unsigned find(const char* substring) const;
-	void compare(const String&);
-
-
+    unsigned find(const char* substring) const;
+	
 	friend std::istream& operator>>(std::istream& in, String& other);
 	friend std::ostream& operator<<(std::ostream& out, const String& other);
 

@@ -21,7 +21,8 @@ int main()
     std::cout << (date5 <= date6) << std::endl;
     std::cout << (date7 > date6) << std::endl;
     std::cout << date5<<std::endl;
-
+    
+    std::cout << "///////" << std::endl;
     Vector<Seat> seats;
     seats.pushBack(Seat(4, 5));
     std::cout << seats[0].currentDate();

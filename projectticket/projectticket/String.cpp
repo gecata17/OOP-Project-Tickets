@@ -55,7 +55,7 @@ String::String(const char* data)
     strcpy_s(this->data, this->size + 1, data);
 }
 
-int String::getSize() const
+size_t String::getSize() const
 {
     return this->size;
 }
@@ -111,28 +111,7 @@ bool String::empty()
     return false;
 }
 
-void String::compare(const String& other)
-{
-    for (int i = 0; this->data[i] != '\0'; ++i)
-    {
-        if (this->data[i] != other.data[i])
-        {
-            std::cout << "First is not equal to second" << std::endl;
-            if (this->data[i] > other.data[i])
-            {
-                std::cout << " First is greater than second" << std::endl;
-            }
-            else
-            {
-                std::cout << "Second is greater than" << std::endl;
-            }
-        }
-        else
-        {
-            std::cout << "First is equalt to" << std::endl;
-        }
-    }
-}
+
 
 
 

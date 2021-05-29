@@ -1,12 +1,5 @@
-﻿  Date.cpp
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Date.cpp(10,28): warning C4267: 'argument': conversion from 'size_t' to 'const char', possible loss of data
-  Hall.cpp
+﻿  String.cpp
   main.cpp
   projectticket.cpp
-  Row.cpp
-  Seat.cpp
-D:\CPPproject\OOP-Project-Tickets\projectticket\projectticket\Seat.cpp(6,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Show.cpp
-  String.cpp
   Generating Code...
   projectticket.vcxproj -> D:\CPPproject\OOP-Project-Tickets\projectticket\Debug\projectticket.exe
