@@ -39,6 +39,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Tickets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="String.h">
@@ -62,7 +65,7 @@
     <ClInclude Include="Hall.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tickets.hpp">
+    <ClInclude Include="Tickets.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

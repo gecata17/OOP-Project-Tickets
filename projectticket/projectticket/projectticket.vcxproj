@@ -147,6 +147,7 @@
     <ClCompile Include="Seat.cpp" />
     <ClCompile Include="Show.cpp" />
     <ClCompile Include="String.cpp" />
+    <ClCompile Include="Tickets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Date.h" />
@@ -155,7 +156,7 @@
     <ClInclude Include="Seat.h" />
     <ClInclude Include="Show.h" />
     <ClInclude Include="String.h" />
-    <ClInclude Include="Tickets.hpp" />
+    <ClInclude Include="Tickets.h" />
     <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
